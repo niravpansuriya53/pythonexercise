@@ -19,3 +19,4 @@ print(len(number_list))
 
 #task B
 print(number_list[:3])
+
