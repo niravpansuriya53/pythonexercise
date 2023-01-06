@@ -20,3 +20,12 @@ print(len(number_list))
 #task B
 print(number_list[:3])
 
+#task C
+sum=0
+for i in number_list:
+    if i%2 !=0:
+        sum +=i
+print(sum)
+
+
+
