@@ -27,5 +27,20 @@ for i in number_list:
         sum +=i
 print(sum)
 
+#task D
+abc=[]
+for i in number_list:
+    if number_list.count(i) > 1:
+        abc.append(i)
+print(len(list(set(abc))))
+
+
+
+
+
+
+
+
+
 
 
