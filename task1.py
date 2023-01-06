@@ -14,3 +14,6 @@ o Sum of odd numbers: 14 If user select option D:
 o Number of duplicate numbers: 2 # (2, 5 repeats in the list) If user select option E:
 o List without duplicate numbers: [2, 3, 4, 12, 44, 1, 3]
 '''
+number_list=[2, 4, 5, 2, 12, 44, 5, 1, 2, 3]
+print(len(number_list))
+
