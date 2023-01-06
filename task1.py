@@ -1,5 +1,4 @@
-'''
-1. Create a list of 10 numbers and show the 5 different operations options to the user on screen. The 5 different operations are as following,
+'''1. Create a list of 10 numbers and show the 5 different operations options to the user on screen. The 5 different operations are as following,
  A. Length of the list
  B. Display first 3 numbers
  C. Display sum of odd numbers
