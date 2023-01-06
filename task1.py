@@ -17,3 +17,5 @@ o List without duplicate numbers: [2, 3, 4, 12, 44, 1, 3]
 number_list=[2, 4, 5, 2, 12, 44, 5, 1, 2, 3]
 print(len(number_list))
 
+#task B
+print(number_list[:3])
