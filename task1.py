@@ -28,12 +28,22 @@ for i in number_list:
 print(sum)
 
 #task D
-abc=[]
-for i in number_list:
-    if number_list.count(i) > 1:
-        abc.append(i)
-print(len(list(set(abc))))
+# abc=[]
+# for i in number_list:
+#     if number_list.count(i) > 1:
+#         abc.append(i)
+# print(len(list(set(abc))))
+from collections import Counter
+counts = dict(Counter(number_list))
+print(counts)
+abc={}
+for key,value in counts.items():
+        if value >=2:
+            abc[key]= value
+print(len(abc))
 
+#task E
+print(list(set(number_list)))
 
 
 
