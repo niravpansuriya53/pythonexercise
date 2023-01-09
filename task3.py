@@ -15,3 +15,10 @@ for element in sentences:
     sub = element.split(', ')
     list_of_list.append(sub)    
 print(list_of_list)
+
+list_of_string=[]
+for list in list_of_list:
+    for string in list:
+        convert= string.split(' ')
+        list_of_string.append(convert)
+print(list_of_string)
