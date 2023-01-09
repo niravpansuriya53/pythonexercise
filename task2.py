@@ -41,3 +41,15 @@ print(top_three_most)
 print("length of 5",top_three_most[:6])
 print("length of 6",top_three_most[6:10])
 print("length of 7",top_three_most[10:])
+
+last_three = sorted(counts, key=counts.get, reverse=True)[-3:]
+last_three_most=[]
+print(last_three)
+for last in last_three:
+    for name in names:
+        if len(name) == last:
+            last_three_most.append(name)
+print(last_three_most)
+print("length of 6",last_three_most[:4])
+print("length of 7",last_three_most[4:6])
+print("length of 6",last_three_most[6:])
