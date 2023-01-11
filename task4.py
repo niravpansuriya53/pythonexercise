@@ -16,3 +16,12 @@ def fib(num):
     return fib_dict[num]
 number_of_fibonacci=int(input("Enter a number :- "))
 print(number_of_fibonacci,"th fibonacci is:- ",fib(number_of_fibonacci))
+
+# sum of list item
+numbers = [23, 44, 5, 67, 1, 1, 2, 4, 5]
+def get_sum(number_list):
+    if len(number_list)==0:
+        return 0
+    else:
+        return number_list[0] + get_sum(number_list[1:]) 
+print("Sum of list := ",get_sum(numbers))
