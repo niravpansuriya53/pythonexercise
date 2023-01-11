@@ -10,23 +10,26 @@ o Numbers = [9, 4, 8, 10, 2, 4, 8, 3, 14, 4, 8] o n = 12
 o [[3, 9], [4, 8], [2, 10]]
 See here, each pair addition is equals to 12 i.e. (3+9=12, 4+8=12, 2+10=12)
 '''
-#sum of to number
-Numbers = [9, 4, 8, 10, 2, 4, 8, 3, 14, 4, 8]
+
+
+from itertools import combinations
+#list
+numbers = [9, 4, 8, 10, 2, 4, 8, 3, 14, 4, 8]
+
+#combinations of list
 list_of_list=[]
-def find(Numbers, length_of_list, sum_no):
-    for i in range(length_of_list):
-        for j in range(i):
-            list_of_two_sum_no=[]
-            if (Numbers[i] + Numbers[j]) == sum_no:
-                list_of_two_sum_no.append(Numbers[i])
-                list_of_two_sum_no.append(Numbers[j])
-                list_of_list.append(list_of_two_sum_no)
+pairs = list(combinations(set(numbers),2))
 
-#enter a sum ofnumber
-sum_no=int(input("Enter a two number of sum:- "))
+# pairs of sum equals number
+sum_no=int(input("Enter a sum of number :- "))
+list_of_sum=[]
+for item in pairs:
+    if sum_no == item[0]+item[1]:
+        list_of_sum.append(list(item))
+print(list_of_sum)
 
-#uniq list of list
-find(Numbers, len(Numbers), sum_no)
-list_of_tuple_uniq = list(set(tuple(sorted(sub)) for sub in list_of_list))
-list_of_list_uniq = [list(ele) for ele in list_of_tuple_uniq]
-print(list_of_list_uniq)
+#Output
+'''
+Enter a sum of number :- 12
+[[3, 9], [4, 8], [2, 10]]
+'''
