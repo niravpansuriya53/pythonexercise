@@ -13,3 +13,15 @@ emails = [abc@gmail.com, 123$tt*@xyz.com, good@bad@uk.in, nasa@usa12.space, no-r
 emails = [abc@gmail.com, nasa@usa12.space, no-reply@domain.in, ramhanuman@saketa.lok]
 
 '''
+import re
+emails = ["abc@gmail.com", "123$tt*@xyz.com", "good@bad@uk.in", "nasa@usa12.space", "no-reply@domain.in", "ramhanuman@saketa.lok", "ruhi.mohan@exter123.123", "fake@fake123.fakercom"]
+
+#email validation
+validation="^[a-zA-Z0-9-_]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,5}$"
+
+#check validation and fetch perfect emails
+perfect_emails=[]
+for email in emails:
+    if (re.match(validation,email)):
+        perfect_emails.append(email)
+print(perfect_emails)       
