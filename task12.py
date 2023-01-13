@@ -56,14 +56,28 @@ class  BankAccount:
         self.ac_bal = ac_bal
         self.ac_pin = ac_pin
     def __str__(self):
-            return f'Account Holder Name:-{self.ac_name}\nAccount Number:-{self.ac_number}\nTotal Balance:-{self.ac_bal}'
+            return f'Account Holder Name:- {self.ac_name}\nAccount Number:- {self.ac_number}\nTotal Balance:- {self.ac_bal}'
     #this method is check the end return data
     def check_pin(self):
-        pin = int(input("Please enter a valid pin:-"))
+        pin = int(input("Please enter a valid pin:- "))
         if pin == self.ac_pin:
             return self.__str__()    
         else:
             print("Your pin is incorrect")
+    #deposit amount
+    def deposit(self):
+        pin = int(input("Please enter a valid pin:- "))
+        amount=int(input("Diposit amout:- "))
+        if pin == self.ac_pin:
+            self.ac_bal +=amount
+            print(f'{amount} rupees are successfully added to your account!\nTotal Balance:- {self.ac_bal}')
+        else:
+            print("Please enter correct pin..!")
+
 b1 = BankAccount("Niarv","12345",1000,5033)
+#print data
 print(b1.check_pin())
+#input amout of deposit
+b1.deposit()
+
 
