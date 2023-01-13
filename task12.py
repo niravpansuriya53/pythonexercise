@@ -50,34 +50,45 @@ o Print(b1)
 Account Holder Name: Ram Account Number: 12345 Total Balance: 2200
 '''
 class  BankAccount:
+
+    #Initialization
     def __init__(self,ac_name,ac_number,ac_bal,ac_pin):
         self.ac_name = ac_name
         self.ac_number = ac_number
         self.ac_bal = ac_bal
         self.ac_pin = ac_pin
+    #print data
     def __str__(self):
-            return f'Account Holder Name:- {self.ac_name}\nAccount Number:- {self.ac_number}\nTotal Balance:- {self.ac_bal}'
-    #this method is check the end return data
+        return f'Account Holder Name:- {self.ac_name}\nAccount Number:- {self.ac_number}\nTotal Balance:- {self.ac_bal}'
+
+    #check pin
     def check_pin(self):
         pin = int(input("Please enter a valid pin:- "))
         if pin == self.ac_pin:
-            return self.__str__()    
+            return self.__str__()   
         else:
-            print("Your pin is incorrect")
-    #deposit amount
-    def deposit(self):
-        pin = int(input("Please enter a valid pin:- "))
-        amount=int(input("Diposit amout:- "))
-        if pin == self.ac_pin:
-            self.ac_bal +=amount
-            print(f'{amount} rupees are successfully added to your account!\nTotal Balance:- {self.ac_bal}')
-        else:
-            print("Please enter correct pin..!")
+            print("Your pin is incorrect!!")
 
+    #deposit amount
+    def deposit(self,amount):
+        if self.check_pin():
+            self.ac_bal = self.ac_bal+amount
+            print(f'{amount} rupees has been diposit successfully!\nTotal Balance:- {self.ac_bal}')
+            
+    #withdraw
+    def withdraw(self,amount):
+        if self.check_pin():
+            if self.ac_bal >= amount:
+                self.ac_bal -= amount
+                print(f'{amount} rupees has been withdrawn successfully!\nTotal Balance:- {self.ac_bal}')
+            else:
+                print("Your account don’t have sufficient balance")
+
+#Create a object
 b1 = BankAccount("Niarv","12345",1000,5033)
-#print data
 print(b1.check_pin())
-#input amout of deposit
-b1.deposit()
+b1.deposit(300)
+b1.withdraw(140)
+
 
 
