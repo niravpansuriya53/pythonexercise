@@ -49,3 +49,21 @@ a. 8000 will be withdrawn from the account.
 o Print(b1)
 Account Holder Name: Ram Account Number: 12345 Total Balance: 2200
 '''
+class  BankAccount:
+    def __init__(self,ac_name,ac_number,ac_bal,ac_pin):
+        self.ac_name = ac_name
+        self.ac_number = ac_number
+        self.ac_bal = ac_bal
+        self.ac_pin = ac_pin
+    def __str__(self):
+            return f'Account Holder Name:-{self.ac_name}\nAccount Number:-{self.ac_number}\nTotal Balance:-{self.ac_bal}'
+    #this method is check the end return data
+    def check_pin(self):
+        pin = int(input("Please enter a valid pin:-"))
+        if pin == self.ac_pin:
+            return self.__str__()    
+        else:
+            print("Your pin is incorrect")
+b1 = BankAccount("Niarv","12345",1000,5033)
+print(b1.check_pin())
+
