@@ -29,6 +29,8 @@ print(“Sorted list:”, n1.sort())
 Numbers: [2, 5, 1, 66, 22, 11, 10] New values: [4, 10, 2, 132, 44, 22, 20] Filtered values: [2, 66, 22, 10] Compounded value: 117
 Sorted list: [1, 2, 5, 10, 11, 22, 66]
 '''
+from functools import reduce
+
 class Number:
 
 #initialization
@@ -50,6 +52,10 @@ class Number:
         filter_value=list(filter(func,self.numbers))
         return filter_value
 
+#Sum of list
+    def compound_the_numbers(self, reduce_func: lambda compound, d: compound + d):
+        sum = reduce(reduce_func,self.numbers)
+        return sum
 
 #create object
 if __name__ =="__main__":
@@ -64,3 +70,8 @@ print("New values:", n1.change_original_values(func1))
 #Filtere values
 func2 = lambda x: x%2 == 0
 print("Filtered values:",n1.filter_values(func2))
+
+#Sum of list
+func3 = lambda x,y:x+y
+print("Compounded value:", n1.compound_the_numbers(reduce_func=func3))
+
