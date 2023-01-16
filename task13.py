@@ -39,9 +39,18 @@ class Number:
     def get(self):
         return f'Numbers: {self.numbers}'
 
+#doubles the value of list
+    def change_original_values(self, func = lambda x:x):
+        x=map(func,self.numbers)
+        new_number = list(x)
+        return new_number
+
 #create object
 if __name__ =="__main__":
      numbers = [2, 5, 1, 66, 22, 11, 10]
 n1=Number(numbers)
 print(n1.get())
 
+#call change value
+func1 = lambda x:x*2
+print("New values:", n1.change_original_values(func1))
