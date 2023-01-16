@@ -35,15 +35,21 @@ class Number:
     def __init__(self,numbers):
         self.numbers = numbers
 
-#get values
+#Get values
     def get(self):
         return f'Numbers: {self.numbers}'
 
-#doubles the value of list
+#Doubles the value of list
     def change_original_values(self, func = lambda x:x):
         x=map(func,self.numbers)
         new_number = list(x)
         return new_number
+
+#Filter values
+    def filter_values(self,func: lambda x: x):
+        filter_value=list(filter(func,self.numbers))
+        return filter_value
+
 
 #create object
 if __name__ =="__main__":
@@ -54,3 +60,7 @@ print(n1.get())
 #call change value
 func1 = lambda x:x*2
 print("New values:", n1.change_original_values(func1))
+
+#Filtere values
+func2 = lambda x: x%2 == 0
+print("Filtered values:",n1.filter_values(func2))
