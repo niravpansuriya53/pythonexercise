@@ -29,4 +29,19 @@ print(“Sorted list:”, n1.sort())
 Numbers: [2, 5, 1, 66, 22, 11, 10] New values: [4, 10, 2, 132, 44, 22, 20] Filtered values: [2, 66, 22, 10] Compounded value: 117
 Sorted list: [1, 2, 5, 10, 11, 22, 66]
 '''
+class Number:
+
+#initialization
+    def __init__(self,numbers):
+        self.numbers = numbers
+
+#get values
+    def get(self):
+        return f'Numbers: {self.numbers}'
+
+#create object
+if __name__ =="__main__":
+     numbers = [2, 5, 1, 66, 22, 11, 10]
+n1=Number(numbers)
+print(n1.get())
 
