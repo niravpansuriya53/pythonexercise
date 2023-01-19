@@ -20,4 +20,11 @@ numbers[i] = numbers[i] + numbers[j]
 numbers[j] = numbers[i] - numbers[j]
 numbers[i] = numbers[i] - numbers[j]
 # '''
-
+# List sorting using selection sort  
+for i in range((len(numbers))-1):
+    min_index = i
+    for j in range(i+1,(len(numbers))):
+        if numbers[j] < numbers[min_index]:
+            min_index = j
+    numbers[i], numbers[min_index] = numbers[min_index], numbers[i]
+print("sorted list using  selection sort  :- ",numbers)
