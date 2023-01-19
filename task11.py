@@ -7,20 +7,11 @@ For example: 1, 2, 3, 4, 5, 6, 7, 8 is an A.P. as consecutive terms difference (
 One term wrong A.P. = [2, 5, 8, 11, 15, 17] One term wrong G.P. = [3, 9, 27, 81, 244, 729]
  Output:
 Correct A.P. = [2, 5, 8, 11, 14, 17] Correct G.P. = [3, 9, 27, 81, 243, 729]
-'''
-# Arithmetic
+ '''
+#Arithmetic
 arithmetic_progress_number = int(input("Enter a arithmetic number :- "))
 arithmetic_progress= [2, 5, 8, 11, 15, 17]
-for index in range(len(arithmetic_progress)-1):
-    if arithmetic_progress[index] - arithmetic_progress[index+1]  != - arithmetic_progress_number:
-        arithmetic_progress[index+1] = arithmetic_progress[index] + arithmetic_progress_number
+for i in range(len(arithmetic_progress)-1):
+    if arithmetic_progress[i+1] - arithmetic_progress_number != arithmetic_progress[i]:
+        arithmetic_progress[i+1] = arithmetic_progress[i] + arithmetic_progress_number
 print(arithmetic_progress)
-
-#Geometric_progress
-
-geometric_progress_number = int(input("Enter a geometric number :- "))
-geometric_progress= [3, 9, 27, 81, 244, 729]
-for index in range(len(geometric_progress)-1):
-    if  geometric_progress[index] /geometric_progress[index+1] != -geometric_progress_number:
-        geometric_progress[index+1] = geometric_progress[index]*geometric_progress_number
-print(geometric_progress)
