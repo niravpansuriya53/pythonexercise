@@ -23,3 +23,24 @@ for i in range(len(geometric_progress)-1):
     if geometric_progress[i+1] / geometric_progress_number != geometric_progress[0]:
         geometric_progress[i+1] = geometric_progress_number * geometric_progress[i]
 print(geometric_progress)
+
+'''
+Logic from this consecutive terms difference (2-1 = 3-2 = 4-3 = 5-4 = 6-5 = 7-6 = 8-7 = 1)  [1, 2, 3, 4, 5, 6, 7, 8]
+'''
+# daynamic list of arithmetic
+arithmetic_progress_number = int(input("Enter a arithmetic number :- "))
+arithmetic_progress= [2, 5, 8, 11, 15, 17]
+arithmetic_progress[0]=arithmetic_progress_number
+for i in range(len(arithmetic_progress)-1):
+    if arithmetic_progress[i+1] - arithmetic_progress_number != arithmetic_progress[i]:
+        arithmetic_progress[i+1] = arithmetic_progress[i] + arithmetic_progress_number
+print(arithmetic_progress)
+
+# daynamic list of Geometric
+geometric_progress_number = int(input("Enter a geometric number :- "))
+geometric_progress= [3, 9, 27, 81, 244, 729]
+geometric_progress[0] = geometric_progress_number
+for i in range(len(geometric_progress)-1):
+    if geometric_progress[i+1] / geometric_progress_number != geometric_progress[0]:
+        geometric_progress[i+1] = geometric_progress_number * geometric_progress[i]
+print(geometric_progress)
